@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 
 @Component({
     selector : 'post-container',
@@ -17,7 +17,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
         </div>
         <a class="blog-post-readmore" >Read more</a>
     </div>
-    `
+    `,
+    styleUrls:[
+        '/post-list.component.css'
+      ],
+    encapsulation: ViewEncapsulation.None
 })
 export class PostComponent {
    @Input() post: any

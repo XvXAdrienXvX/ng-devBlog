@@ -2,11 +2,16 @@ import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'post-app',
-  template: `<post-list></post-list>`,
+  template: `
+     <nav-bar></nav-bar>
+     <div class="flex-container">
+        <post-list></post-list>
+     </div>
+  `,
   styleUrls:[
-    '/post/post-list.component.css'
+    '/post-app.component.css'
   ],
-  encapsulation: ViewEncapsulation.None
+encapsulation: ViewEncapsulation.None
 })
 export class PostAppComponent {
 
