@@ -9,8 +9,7 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
         </div>
         <div class="blog-post-info">
             <div class="blog-post-date">
-                <span>Wednesday</span>
-                <span>April 28 2021</span>
+                <span>{{post.Date}}</span>
             </div>
             <h1 class="blog-post-title">{{post.name}}</h1>
             <p class="blog-post-text">{{post.long_description}}</p>
