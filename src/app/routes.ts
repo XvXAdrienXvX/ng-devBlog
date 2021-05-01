@@ -1,8 +1,10 @@
 import { Routes } from '@angular/router';
 import { Error404Component } from './Common/Errors/error404.component';
-import { PostDetailsComponent } from "./Post/post-details/post-details.component";
-import { PostListComponent } from "./Post/post-list.component";
-import { PostRouteActivator } from './Post/post-details/post-route-activator.service';
+import{
+    PostDetailsComponent,
+    PostListComponent,
+    PostRouteActivator
+} from './Post/index';
 
 export const appRoutes = [
     { path:'post', component: PostListComponent },
