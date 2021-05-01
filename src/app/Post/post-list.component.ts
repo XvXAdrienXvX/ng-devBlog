@@ -3,7 +3,6 @@ import { BlogPostService } from '../Service/post.service';
 import { ToastrService } from '../Service/toastr.service';
 
 @Component({
-    selector : 'post-list',
     template: `
     <div class="container">
         <post-container *ngFor="let post of posts" (click)="handlePostClick(post.name)" [post]="post" ></post-container>

@@ -5,7 +5,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   template: `
      <nav-bar></nav-bar>
      <div class="flex-container">
-        <post-list></post-list>
+        <router-outlet></router-outlet>
      </div>
   `,
   styleUrls:[

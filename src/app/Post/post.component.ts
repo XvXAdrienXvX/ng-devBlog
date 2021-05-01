@@ -14,7 +14,7 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
             <h1 class="blog-post-title">{{post.name}}</h1>
             <p class="blog-post-text">{{post.long_description}}</p>
         </div>
-        <a class="blog-post-readmore" >Read more</a>
+        <a class="blog-post-readmore" [routerLink]="['/post', post.id]">Read more</a>
     </div>
     `,
     styleUrls:[
