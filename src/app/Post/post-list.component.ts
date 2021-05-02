@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogPostService } from '../Service/post.service';
-import { ToastrService } from '../Service/toastr.service';
+import { BlogPostService } from '../Core/post.service';
+import { ToastrService } from '../Core/toastr.service';
 
 @Component({
     template: `

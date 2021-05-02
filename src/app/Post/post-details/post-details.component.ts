@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BlogPostService } from 'src/app/Service/post.service';
+import { BlogPostService } from 'src/app/Core/post.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
