@@ -3,8 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { UserRoutes } from '../User/user.routes';
-import { ProfileComponent } from './profile.component';
-import { LoginComponent } from './login.component';
+import { ProfileComponent } from './Profile/profile.component';
+import { LoginComponent } from '././Login/login.component';
 
 @NgModule({
   declarations: [

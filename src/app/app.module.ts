@@ -6,7 +6,7 @@ import {
   PostDetailsComponent,
   PostRouteActivator
 } from './Post/index';
-import { PostAppComponent } from './post-app.component';
+import { AppComponent } from './app.component';
 import { PostComponent } from './Post/post.component';
 import { NavBarComponent } from './Common/nav-bar/nav.component';
 import { BlogPostService } from './Core/post.service';
@@ -18,7 +18,7 @@ import { AuthService } from './Core/auth.service';
 
 @NgModule({
   declarations: [
-    PostAppComponent,
+    AppComponent,
     PostListComponent,
     PostComponent,
     PostDetailsComponent,
@@ -30,6 +30,6 @@ import { AuthService } from './Core/auth.service';
     RouterModule.forRoot(appRoutes)
   ],
   providers: [BlogPostService, ToastrService, PostRouteActivator, AuthService],
-  bootstrap: [PostAppComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

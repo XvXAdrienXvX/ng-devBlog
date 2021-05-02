@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'post-app',
+  selector: 'app',
   template: `
      <nav-bar></nav-bar>
      <div class="flex-container">
@@ -9,10 +9,10 @@ import { Component, ViewEncapsulation } from '@angular/core';
      </div>
   `,
   styleUrls:[
-    '/post-app.component.css'
+    '/app.component.css'
   ],
 encapsulation: ViewEncapsulation.None
 })
-export class PostAppComponent {
+export class AppComponent {
 
 }

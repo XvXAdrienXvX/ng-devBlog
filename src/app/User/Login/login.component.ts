@@ -1,7 +1,7 @@
 import { ViewEncapsulation } from '@angular/core';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../Core/auth.service';
+import { AuthService } from '../../Core/auth.service';
 
 @Component({
    templateUrl: '/login.component.html',
