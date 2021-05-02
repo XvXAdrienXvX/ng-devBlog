@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogPostService } from '../Core/post.service';
 import { ToastrService } from '../Core/toastr.service';
+import { IPost } from './Shared/post.model';
 
 @Component({
     template: `
     <div class="container">
-        <post-container *ngFor="let post of posts" (click)="handlePostClick(post.name)" [post]="post" ></post-container>
+        <post-container *ngFor="let post of posts"  [post]="post" ></post-container>
     </div>
     `
 })
 export class PostListComponent implements OnInit{
-  posts: any[];
+  posts: IPost[];
 
   constructor(private postService: BlogPostService,
               private toastr: ToastrService){
@@ -19,9 +20,5 @@ export class PostListComponent implements OnInit{
 
   public ngOnInit(){
     this.posts = this.postService.getPosts();
-  }
-
-  handlePostClick(postName){
-     this.toastr.onSuccess(postName);
   }
 }

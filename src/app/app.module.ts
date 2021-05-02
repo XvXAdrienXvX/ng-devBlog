@@ -14,6 +14,7 @@ import { ToastrService } from './Core/toastr.service';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 import { Error404Component } from './Common/Errors/error404.component';
+import { AuthService } from './Core/auth.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { Error404Component } from './Common/Errors/error404.component';
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [BlogPostService, ToastrService, PostRouteActivator],
+  providers: [BlogPostService, ToastrService, PostRouteActivator, AuthService],
   bootstrap: [PostAppComponent]
 })
 export class AppModule { }

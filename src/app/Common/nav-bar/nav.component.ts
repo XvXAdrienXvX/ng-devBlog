@@ -1,4 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { AuthService } from 'src/app/Core/auth.service';
+
 
 @Component({
     selector:'nav-bar',
@@ -9,5 +11,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class NavBarComponent{
+   constructor(private authService: AuthService){
 
+   }
 }

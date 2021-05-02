@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
+import { IPost } from '../Post/Shared/post.model';
 
 @Injectable()
 export class BlogPostService{
    
-   getPosts(){
+   getPosts(): IPost[]{
        return postList;
    }
    
-   getPost(id: number){
+   getPost(id: number): IPost{
        return postList.find(post => post.id == id);
    }
 }
 
-const postList = [
+const postList : IPost[] = [
     {
         id: 1,
         name: 'EF Core 6',
