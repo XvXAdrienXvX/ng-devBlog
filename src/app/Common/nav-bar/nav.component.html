@@ -3,6 +3,7 @@
     <nav>
         <ul class="nav-links">
             <li><a [routerLink]="['/post']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Posts</a></li>
+            <li *ngIf="authService.isAuthenticated()" ><a [routerLink]="['/create-post']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Create Post</a></li>
             <li><a href="#">About</a></li>
         </ul>
     </nav>

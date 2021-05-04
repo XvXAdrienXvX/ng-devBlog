@@ -1,0 +1,16 @@
+.create-post-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-field {
+    width:30rem;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.validation-button-row{
+    display: inline-block;
+    width:5rem;
+    padding-left: 5px;
+}

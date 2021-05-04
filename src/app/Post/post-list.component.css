@@ -1,5 +1,5 @@
 .blog-post{
-    width: 60rem;
+    width: 40rem;
     max-width: 98rem;
     height: 10rem;
     padding: 5rem;
@@ -50,22 +50,31 @@
     color: #4facfe;
 }
 
+.blog-post-info{
+    flex-grow: 1;
+    min-width: 0;
+}
+
 .blog-post-text{
     margin-bottom: 3rem;
     font-size: 1.4rem;
     color:rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .blog-post-readmore{
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: 10px 2rem;
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #fff;
     border-radius: 0.8rem;
     text-decoration: none;
     background-color: royalblue;
+    transform: translateY(100%);
 }
 
 .blog-post-readmore:hover{
@@ -74,12 +83,12 @@
 
 @media screen and (max-width: 1068px){
     .blog-post{
-        max-width: 80rem;
+        max-width: 50rem;
     }
 
     .blog-img{
         min-width: 30rem;
-        max-width: 30rem;
+        max-width: 15rem;
     }
 }
 

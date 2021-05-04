@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { Error404Component } from './Common/Errors/error404.component';
 import{
+    CreatePostComponent,
     PostDetailsComponent,
     PostListComponent,
     PostRouteActivator
@@ -9,6 +10,7 @@ import{
 export const appRoutes = [
     { path:'post', component: PostListComponent },
     { path: 'post/:id', component: PostDetailsComponent, canActivate: [PostRouteActivator]},
+    { path:'create-post', component: CreatePostComponent },
     { path: '404', component: Error404Component},
     { path: '', redirectTo: '/post', pathMatch: 'full'},
     { path: 'user', loadChildren: () => import('./User/user.module').then(mod => mod.UserModule)}

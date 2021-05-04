@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import {
   PostListComponent,
   PostDetailsComponent,
-  PostRouteActivator
+  PostRouteActivator,
+  CreatePostComponent
 } from './Post/index';
 import { AppComponent } from './app.component';
 import { PostComponent } from './Post/post.component';
@@ -16,6 +17,7 @@ import { RouterModule } from '@angular/router';
 import { Error404Component } from './Common/Errors/error404.component';
 import { AuthService } from './Core/auth.service';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule, MatInputModule, MatButtonModule, MatSelectModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -23,13 +25,18 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     PostListComponent,
     PostComponent,
     PostDetailsComponent,
+    CreatePostComponent,
     NavBarComponent,
     Error404Component
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule
   ],
   providers: [BlogPostService, ToastrService, PostRouteActivator, AuthService],
   bootstrap: [AppComponent]
