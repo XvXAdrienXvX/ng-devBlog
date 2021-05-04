@@ -6,6 +6,6 @@
             <li><a href="#">About</a></li>
         </ul>
     </nav>
-    <a class="signin" *ngIf="!authService.isAuthenticated()" [routerLink]="['user/login']"><button>Sign In</button></a>
-    <a class="profile" *ngIf="authService.isAuthenticated()" [routerLink]="['user/profile']"><button>{{authService.currentUser.firstName}}</button></a>
+    <a class="signin" *ngIf="!authService.isAuthenticated()" [routerLink]="['user/login']"><button class="sign-in">Sign In</button></a>
+    <a class="profile" *ngIf="authService.isAuthenticated()" [routerLink]="['user/profile']"><button class="profile-button">{{authService.currentUser.firstName}}</button></a>
 </header>

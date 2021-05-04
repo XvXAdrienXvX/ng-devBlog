@@ -1,0 +1,18 @@
+<div class="profile-container">
+    <form class="profile-form" [formGroup]="profileForm" (ngSubmit)="SaveProfile(profileForm.value)">
+        
+        <mat-form-field class="profile-field" appearance="fill">
+            <mat-label>Firstname</mat-label>
+            <input matInput formControlName="firstName">
+            <mat-error *ngIf="firstName.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="profile-field" appearance="fill">
+            <mat-label>Lastname</mat-label>
+            <input matInput formControlName="lastName">
+            <mat-error *ngIf="lastName.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <div class="validation-button-row">
+            <button mat-button color="primary">Submit</button>
+        </div>
+    </form>
+</div>

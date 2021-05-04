@@ -15,6 +15,7 @@ import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 import { Error404Component } from './Common/Errors/error404.component';
 import { AuthService } from './Core/auth.service';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AuthService } from './Core/auth.service';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    NoopAnimationsModule
   ],
   providers: [BlogPostService, ToastrService, PostRouteActivator, AuthService],
   bootstrap: [AppComponent]
