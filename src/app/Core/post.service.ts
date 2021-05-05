@@ -26,7 +26,7 @@ const postList : IPost[] = [
            id: 1,
            name:'.Net Tech'
         },
-        Date: new Date('28/04/2021'),
+        Date: new Date('04/28/2021'),
         Description: 'What\'s New in EF Core 6.0',
         Content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Sed maximus bibendum turpis vitae auctor. 
@@ -41,7 +41,7 @@ const postList : IPost[] = [
             id: 1,
             name:'.Net Tech'
          },
-        Date:new Date('28/04/2021'),
+        Date:new Date('04/28/2021'),
         Description: 'What\'s New in EF Core 6.0',
         Content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Sed maximus bibendum turpis vitae auctor. 
@@ -56,7 +56,7 @@ const postList : IPost[] = [
             id: 1,
             name:'.Net Tech'
          },
-        Date:new Date('28/04/2021'),
+        Date:new Date('04/28/2021'),
         Description: 'What\'s New in EF Core 6.0',
         Content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Sed maximus bibendum turpis vitae auctor. 
