@@ -11,7 +11,7 @@ header{
     justify-content: flex-end;
     align-items: center;
     padding: 5px 5%;
-    background-color: black;
+    background-color: #673ab7;
     position: relative;
 }
 
@@ -43,26 +43,18 @@ header{
  
  .sign-in{
      padding: 9px 25px;
-     background-color: black;
+     background-color:#673ab7;
      border:none;
      border-radius: 50px;
      cursor: pointer;
      transition: all 0.3s ease 0s;
  }
 
- .sign-in:hover{
-    background-color:black;
- }
-
  .profile-button{
     padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
+    background-color: #673ab7;
     border:none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-}
-
-.profile-button:hover{
-   background-color: rgba(0, 136, 169, 0.8);
 }

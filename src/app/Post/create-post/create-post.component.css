@@ -1,6 +1,7 @@
-.create-post-container {
+.create-post-form {
     display: flex;
     flex-direction: column;
+    margin-top: 10vh;
 }
 
 .post-field {
@@ -13,4 +14,9 @@
     display: inline-block;
     width:5rem;
     padding-left: 5px;
+}
+
+.validation-button-row > button{
+  background-color: #673ab7;
+  color: white;
 }

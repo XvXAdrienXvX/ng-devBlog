@@ -5,16 +5,16 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
     template: `
     <div class="blog-post">
         <div class="blog-img">
-            <img src="{{post.logo}}" >
+            <img src="{{post.imgUrl}}" >
         </div>
         <div class="blog-post-info">
             <div class="blog-post-date">
-                <span>{{post.Date.toDateString()}}</span>
+                <span>{{post.postDate.toDateString()}}</span>
             </div>
-            <h1 class="blog-post-title">{{post.name}}</h1>
-            <p class="blog-post-text">{{post.Content}}</p>
+            <h1 class="blog-post-title">{{post.title}}</h1>
+            <p class="blog-post-text">{{post.body}}</p>
         </div>
-        <a class="blog-post-readmore" [routerLink]="['/post', post.id]">Read more</a>
+        <a class="blog-post-readmore" [routerLink]="['/post', post.PostId]">Read more</a>
     </div>
     `
 })

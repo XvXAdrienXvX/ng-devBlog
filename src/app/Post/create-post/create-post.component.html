@@ -1,21 +1,23 @@
 <div class="create-post-container">
+  <form class="create-post-form">
     <mat-form-field class="post-field" appearance="fill">
-        <mat-label>Post name</mat-label>
-        <input matInput>
-      </mat-form-field>
-      <mat-form-field class="post-field" appearance="fill">
-        <mat-label>Category</mat-label>
-        <mat-select>
-            <mat-option *ngFor="let category of postCategoryList" [value]="category.id">
-                {{category.name}}
-              </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field class="post-field" appearance="fill">
-        <mat-label>Post Content</mat-label>
-        <textarea matInput></textarea>
-      </mat-form-field>    
-      <div class="validation-button-row">
-        <button mat-button color="primary">Create Post</button>
-    </div>
+      <mat-label>Post name</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field class="post-field" appearance="fill">
+      <mat-label>Category</mat-label>
+      <mat-select>
+          <mat-option *ngFor="let category of postCategoryList" [value]="category.id">
+              {{category.name}}
+            </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="post-field" appearance="fill">
+      <mat-label>Post Content</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>    
+    <div class="validation-button-row">
+      <button mat-button>Create Post</button>
+  </div>
+  </form>
 </div>

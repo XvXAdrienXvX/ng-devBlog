@@ -1,11 +1,11 @@
 <div class="post-details-container">
     <div class="post-details-img">
-        <img [src]="post?.logo" [alt]="post?.name">
+        <img [src]="post?.imgUrl" [alt]="post?.title">
     </div>
     <div class="post-details-info">
         <div class="post-details-date">
-            <span>{{post.Date?.toDateString()}}</span>
+            <span>{{post.postDate?.toDateString()}}</span>
         </div>
-        <p class="post-details-text">{{post?.Content}}</p>
+        <p class="post-details-text">{{post?.body}}</p>
     </div>
 </div>

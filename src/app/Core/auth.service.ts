@@ -7,9 +7,12 @@ export class AuthService{
 
   loginUser(username: string, password: string){
       this.currentUser = {
-          id: 1,
+          UserId: 1,
           firstName: 'Adrien',
-          lastname: 'Vvv',        
+          lastName: 'Vvv',      
+          username:'AdrienX',  
+          email: 'a@gmail.com',
+          ProfileImageUrl: null
       }
   }
 
@@ -19,6 +22,6 @@ export class AuthService{
 
   UpdateCurrentUser(firstName: string, lastName: string){
       this.currentUser.firstName = firstName;
-      this.currentUser.lastname = lastName;
+      this.currentUser.lastName = lastName;
   }
 }

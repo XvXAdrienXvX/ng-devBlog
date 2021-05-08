@@ -20,6 +20,6 @@ export class PostDetailsComponent{
    }
 
    ngOnInit() {
-       this.post = this.postService.getPost(+this.route.snapshot.params['id']);
+       this.post = this.postService.getPostById(+this.route.snapshot.params['id']);
    }
 }

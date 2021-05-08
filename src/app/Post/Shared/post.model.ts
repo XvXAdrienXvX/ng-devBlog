@@ -1,14 +1,14 @@
 export interface IPost{
-    id: number,
-    name: string,
-    logo: string,
-    Category: ICategory,
-    Date: Date,
-    Description: string,
-    Content: string
+    PostId: number,
+    UserId: number,
+    postTypeId: number,
+    imgUrl: string,
+    title: string,
+    body: string,
+    postDate: Date,
 }
 
-export interface ICategory{
-    id: number,
+export interface IPostType{
+    postTypeId: number,
     name: string
 }

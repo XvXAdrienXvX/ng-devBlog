@@ -2,7 +2,7 @@ import { OnInit, ViewEncapsulation } from '@angular/core';
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/Core/auth.service';
 import { BlogPostService } from 'src/app/Core/post.service';
-import { ICategory } from '../Shared/post.model';
+import { IPostType } from '../Shared/post.model';
 
 @Component({
  templateUrl: '/create-post.component.html',
@@ -12,7 +12,7 @@ import { ICategory } from '../Shared/post.model';
  encapsulation: ViewEncapsulation.None
 })
 export class CreatePostComponent implements OnInit{
-   private postCategoryList: ICategory[]
+   private postCategoryList: IPostType[]
 
    constructor(private postService: BlogPostService){
 

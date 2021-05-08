@@ -1,5 +1,8 @@
 export interface IUser{
-    id: number;
-    firstName: string;
-    lastname: string;
+    UserId: number,
+    firstName: string,
+    lastName: string,
+    username: string,
+    email: string,
+    ProfileImageUrl: string
 }
