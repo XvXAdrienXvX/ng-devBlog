@@ -1,0 +1,47 @@
+.post-details-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 5rem 5rem;
+}
+
+.post-details-img{
+    min-width: 20rem;
+    max-width: 20rem;
+    height: auto;
+    position: relative;
+}
+
+.post-details-img img{ 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.post-details-date span{
+    display: block;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+ }
+ 
+ .post-details-title{
+     font-size: 1.5rem;
+     margin: 1.5rem 0 2rem;
+     text-transform: uppercase;
+     color: purple;
+ }
+ 
+ .post-details-info{
+     flex-grow: 1;
+     min-width: 0;
+ }
+ 
+ .post-details-text{
+     margin-bottom: 3rem;
+     font-size: 1.4rem;
+     color:rgba(0, 0, 0, 0.5);
+ }
+ 

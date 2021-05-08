@@ -1,3 +1,11 @@
-<div>
-    <img [src]="post?.image" [alt]="post?.name">
+<div class="post-details-container">
+    <div class="post-details-img">
+        <img [src]="post?.logo" [alt]="post?.name">
+    </div>
+    <div class="post-details-info">
+        <div class="post-details-date">
+            <span>{{post.Date?.toDateString()}}</span>
+        </div>
+        <p class="post-details-text">{{post?.Content}}</p>
+    </div>
 </div>
