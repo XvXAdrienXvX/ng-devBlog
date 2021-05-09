@@ -1,23 +1,36 @@
 <div class="create-post-container">
   <form class="create-post-form">
-    <mat-form-field class="post-field" appearance="fill">
-      <mat-label>Post name</mat-label>
-      <input matInput>
-    </mat-form-field>
-    <mat-form-field class="post-field" appearance="fill">
-      <mat-label>Category</mat-label>
-      <mat-select>
-          <mat-option *ngFor="let category of postCategoryList" [value]="category.id">
-              {{category.name}}
-            </mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field class="post-field" appearance="fill">
-      <mat-label>Post Content</mat-label>
-      <textarea matInput></textarea>
-    </mat-form-field>    
-    <div class="validation-button-row">
-      <button mat-button>Create Post</button>
-  </div>
+    <div class="post-header">
+      <mat-form-field class="post-field" appearance="fill">
+        <mat-label>Post name</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="post-field" appearance="fill">
+        <mat-label>Category</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let category of postCategoryList" [value]="category.postTypeId">
+                {{category.name}}
+              </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+   
+    <div class="post-body">
+      <div class="post-markdown">
+        <mat-form-field appearance="fill">
+          <mat-label>Post Content</mat-label>
+          <textarea matInput  cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5" (keyup)="updateOutput($event.target.value)">           
+          </textarea>
+        </mat-form-field>    
+      </div>
+
+      <div class="post-markdown-output">
+        <mat-form-field appearance="fill">
+          <mat-label>Output</mat-label>
+          <textarea [innerHtml]="convertedText" readonly matInput  cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+        </mat-form-field>    
+      </div>
+    </div>
+
   </form>
 </div>

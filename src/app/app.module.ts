@@ -18,6 +18,8 @@ import { Error404Component } from './Common/Errors/error404.component';
 import { AuthService } from './Core/auth.service';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule, MatInputModule, MatButtonModule, MatSelectModule} from '@angular/material';
+import { CreatePostRouteActivator } from './Post/create-post/create-post-activator.service';
+import { MarkdownService } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,7 @@ import { MatFormFieldModule, MatInputModule, MatButtonModule, MatSelectModule} f
     MatButtonModule,
     MatSelectModule
   ],
-  providers: [BlogPostService, ToastrService, PostRouteActivator, AuthService],
+  providers: [BlogPostService, ToastrService, PostRouteActivator, CreatePostRouteActivator , MarkdownService ,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
