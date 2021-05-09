@@ -17,9 +17,14 @@ import { RouterModule } from '@angular/router';
 import { Error404Component } from './Common/Errors/error404.component';
 import { AuthService } from './Core/auth.service';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule, MatInputModule, MatButtonModule, MatSelectModule} from '@angular/material';
+import { MatSelectModule} from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule} from '@angular/material/button';
 import { CreatePostRouteActivator } from './Post/create-post/create-post-activator.service';
-import { MarkdownService } from 'ngx-markdown';
+import { MarkdownModule, MarkdownService, MarkedOptions } from 'ngx-markdown';
+import { SecurityContext } from '@angular/core';
+import { FormBuilder,  ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,12 +40,21 @@ import { MarkdownService } from 'ngx-markdown';
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     NoopAnimationsModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    MarkdownModule.forRoot({ sanitize: SecurityContext.NONE, 
+      markedOptions: {
+        provide: MarkedOptions,
+        useValue: {
+          gfm: true,
+          breaks: false
+        },
+      },})
   ],
-  providers: [BlogPostService, ToastrService, PostRouteActivator, CreatePostRouteActivator , MarkdownService ,AuthService],
+  providers: [BlogPostService, ToastrService, PostRouteActivator, CreatePostRouteActivator , MarkdownService ,AuthService, FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

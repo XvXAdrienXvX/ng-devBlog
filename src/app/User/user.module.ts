@@ -5,7 +5,9 @@ import { Router, RouterModule } from '@angular/router';
 import { UserRoutes } from '../User/user.routes';
 import { ProfileComponent } from './Profile/profile.component';
 import { LoginComponent } from '././Login/login.component';
-import { MatFormFieldModule, MatInputModule, MatButtonModule} from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
