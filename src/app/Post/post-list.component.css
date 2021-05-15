@@ -1,3 +1,9 @@
+.blog-post-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+}
+
 .blog-post{
     width: 40rem;
     max-width: 98rem;
