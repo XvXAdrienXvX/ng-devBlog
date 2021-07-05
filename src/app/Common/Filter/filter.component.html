@@ -1,0 +1,20 @@
+<div class="filter-container">
+<mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+           <mat-panel-title>
+             Filter
+          </mat-panel-title>
+          <mat-panel-description>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-label></mat-label>
+        <select>
+          <option value="Contains">Contains</option>
+          <option value="Equals">Equals</option>
+        </select>
+    </mat-expansion-panel>
+</mat-accordion>
+</div>

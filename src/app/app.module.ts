@@ -10,8 +10,9 @@ import {
 import { AppComponent } from './app.component';
 import { PostComponent } from './Post/post.component';
 import { NavBarComponent } from './Common/nav-bar/nav.component';
+import { FilterPanelComponent } from './Common/Filter/filter.component';
 import { BlogPostService } from './Core/post.service';
-import { ToastrService } from './Core/toastr.service';
+import { Toastr, TOASTR_TOKEN } from './Core/toastr.service';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 import { Error404Component } from './Common/Errors/error404.component';
@@ -21,10 +22,13 @@ import { MatSelectModule} from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule} from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { CreatePostRouteActivator } from './Post/create-post/create-post-activator.service';
 import { MarkdownModule, MarkdownService, MarkedOptions } from 'ngx-markdown';
 import { SecurityContext } from '@angular/core';
 import { FormBuilder,  ReactiveFormsModule } from '@angular/forms';
+
+declare let toastr: Toastr
 
 @NgModule({
   declarations: [
@@ -34,6 +38,7 @@ import { FormBuilder,  ReactiveFormsModule } from '@angular/forms';
     PostDetailsComponent,
     CreatePostComponent,
     NavBarComponent,
+    FilterPanelComponent,
     Error404Component
   ],
   imports: [
@@ -44,6 +49,7 @@ import { FormBuilder,  ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatExpansionModule,
     MatSelectModule,
     MarkdownModule.forRoot({ sanitize: SecurityContext.NONE, 
       markedOptions: {
@@ -54,7 +60,14 @@ import { FormBuilder,  ReactiveFormsModule } from '@angular/forms';
         },
       },})
   ],
-  providers: [BlogPostService, ToastrService, PostRouteActivator, CreatePostRouteActivator , MarkdownService ,AuthService, FormBuilder],
+  providers: [
+    BlogPostService, 
+    {provide: TOASTR_TOKEN, useValue: toastr}, 
+    PostRouteActivator,
+    CreatePostRouteActivator , 
+    MarkdownService ,
+    AuthService, 
+    FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

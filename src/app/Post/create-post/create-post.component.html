@@ -1,13 +1,13 @@
 <div class="create-post-container">
-  <form class="create-post-form" [formGroup]="form">
+  <form class="create-post-form" [formGroup]="createPostForm" (ngSubmit)="createPost(createPostForm.value)" autocomplete="off"> 
     <div class="post-header">
       <mat-form-field class="post-field" appearance="fill">
         <mat-label>Post name</mat-label>
-        <input matInput>
+        <input formControlName="postName" matInput>
       </mat-form-field>
       <mat-form-field class="post-field" appearance="fill">
         <mat-label>Category</mat-label>
-        <mat-select>
+        <mat-select formControlName="postType">
             <mat-option *ngFor="let category of postCategoryList" [value]="category.postTypeId">
                 {{category.name}}
               </mat-option>
@@ -23,7 +23,7 @@
               <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5" formControlName="body" class="variable-textarea">           
               </textarea>
           </mat-form-field>  
-         <markdown class="variable-binding"  [data]="form.get('body').value"></markdown>
+         <markdown class="variable-binding"  [data]="createPostForm.get('body').value"></markdown>
       </div>
        
     </div>

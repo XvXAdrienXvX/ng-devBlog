@@ -22,6 +22,10 @@ export class BlogPostService{
    getCategories(): IPostType[]{
        return categoryList;
    }
+
+   savePost(post: IPost): void {
+      postList.push(post);
+   }
 }
 
 const postList : IPost[] = [

@@ -1,7 +1,6 @@
 import { ViewEncapsulation } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { BlogPostService } from '../Core/post.service';
-import { ToastrService } from '../Core/toastr.service';
 import { IPost } from './Shared/post.model';
 
 @Component({
@@ -18,8 +17,7 @@ import { IPost } from './Shared/post.model';
 export class PostListComponent implements OnInit{
   posts: IPost[];
 
-  constructor(private postService: BlogPostService,
-              private toastr: ToastrService){
+  constructor(private postService: BlogPostService){
      
   }
 
