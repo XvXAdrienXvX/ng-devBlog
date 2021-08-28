@@ -1,7 +1,7 @@
 .blog-post-container{
     display: flex;
     justify-content: center;
-    margin-top: 20vh;
+    margin-top: 10vh;
 }
 
 .blog-post{
@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     border-radius: 0.8rem;
-    margin-bottom: 5vh;
+    margin-bottom: 1vh;
 }
 
 .blog-img{

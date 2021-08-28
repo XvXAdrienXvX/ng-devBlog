@@ -1,12 +1,21 @@
 import { Injectable } from '@angular/core';
 import { IPostType, IPost } from '../Post/Shared/post.model';
 import * as _ from 'lodash';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+  })
 export class BlogPostService{
-   
-   getPosts(): IPost[]{
-       return postList;
+   private postURL = 'api/posts';
+
+   constructor(private http: HttpClient) {
+      
+   }
+
+   getPosts(): Observable<IPost[]>{
+       return this.http.get<IPost[]>(this.postURL)
    }
    
    getPostById(id: number): IPost{

@@ -23,10 +23,17 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule} from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
 import { CreatePostRouteActivator } from './Post/create-post/create-post-activator.service';
 import { MarkdownModule, MarkdownService, MarkedOptions } from 'ngx-markdown';
 import { SecurityContext } from '@angular/core';
 import { FormBuilder,  ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './Core/InMemoryDB.service';
 
 declare let toastr: Toastr
 
@@ -51,6 +58,12 @@ declare let toastr: Toastr
     MatButtonModule,
     MatExpansionModule,
     MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTableModule,
+    MatIconModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule,
     MarkdownModule.forRoot({ sanitize: SecurityContext.NONE, 
       markedOptions: {
         provide: MarkedOptions,
@@ -58,7 +71,10 @@ declare let toastr: Toastr
           gfm: true,
           breaks: false
         },
-      },})
+      },}),
+      HttpClientInMemoryWebApiModule.forRoot(
+        InMemoryDataService, { dataEncapsulation: false }
+      )
   ],
   providers: [
     BlogPostService, 

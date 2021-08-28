@@ -4,17 +4,52 @@
     (closed)="panelOpenState = false">
         <mat-expansion-panel-header>
            <mat-panel-title>
-             Filter
+            <mat-icon aria-hidden="false" class="filter-icon" >filter_list</mat-icon>
           </mat-panel-title>
           <mat-panel-description>
           </mat-panel-description>
         </mat-expansion-panel-header>
 
         <mat-label></mat-label>
-        <select>
-          <option value="Contains">Contains</option>
-          <option value="Equals">Equals</option>
-        </select>
+        <form [formGroup]="filterData" (ngSubmit)="ApplyFilter(filterData.Value)">
+          <table class="filter-table">
+            <ng-container *ngFor="let field of filterFields" [field]="filterFields">
+              <tr>
+                <td>
+                  <ng-container [ngSwitch]="field.ControlType">
+                    <span *ngSwitchCase="filterControlType.Textbox"> 
+                      <select class="field-filter">
+                        <option value="Contains">Contains</option>
+                        <option value="Equals">Equals</option>
+                      </select>
+                   </span>
+                   <span *ngSwitchCase="filterControlType.Date">
+                    <select class="field-filter">
+                      <option value="Equals">Equals</option>
+                    </select>
+                  </span>
+                  </ng-container>
+                </td>
+                 <td>
+                  <mat-label class="field-Name">{{field.label}}</mat-label>
+                  <ng-container [ngSwitch]="field.ControlType">
+                    <span *ngSwitchCase="filterControlType.Textbox"> 
+                       <input  mat-input >
+                    </span>
+                    <span *ngSwitchCase="filterControlType.Date">
+                      <input matInput [matDatepicker]="picker">
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                    </span>
+                  </ng-container>
+                 </td>
+              
+              </tr>  
+            </ng-container>
+          </table>
+        </form>
+        
+        <span  class="filter-button"> <button mat-button>Filter</button></span>
     </mat-expansion-panel>
 </mat-accordion>
 </div>

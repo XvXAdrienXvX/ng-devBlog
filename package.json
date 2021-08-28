@@ -13,7 +13,7 @@
   "dependencies": {
     "@angular/animations": "11.0.5",
     "@angular/cdk": "^11.2.12",
-    "@angular/common": "11.0.5",
+    "@angular/common": "^11.0.5",
     "@angular/compiler": "11.0.5",
     "@angular/core": "11.0.5",
     "@angular/forms": "11.0.5",
@@ -25,6 +25,7 @@
     "@uirouter/core": "6.0.7",
     "@uirouter/rx": "0.6.5",
     "@uirouter/visualizer": "^7.2.1",
+    "angular-in-memory-web-api": "^0.11.0",
     "core-js": "^2.5.7",
     "jquery": "^3.5.0",
     "lodash": "^4.17.21",
@@ -35,11 +36,11 @@
     "rxjs-compat": "^6.6.7",
     "toastr": "^2.1.4",
     "ts-helpers": "^1.1.2",
-    "tslib": "^2.2.0",
+    "tslib": "^2.3.0",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1100.7",
+    "@angular-devkit/build-angular": "^0.1100.7",
     "@angular/animations": "11.0.5",
     "@angular/cli": "^11.2.11",
     "@angular/compiler-cli": "11.0.5",

@@ -10,7 +10,7 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
           </div>
        <div class="blog-post-info">
            <div class="blog-post-date">
-               <span>{{post.postDate.toDateString()}}</span>
+               <span></span>
            </div>
             <h1 class="blog-post-title">{{post.title}}</h1>
             <p class="blog-post-text">{{post.body}}</p>

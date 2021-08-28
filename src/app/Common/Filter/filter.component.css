@@ -1,0 +1,30 @@
+.filter-table td{
+  padding: 0 20px;
+}
+
+.filter-table{
+  margin-left: 30px;
+  padding-bottom: 20px;
+}
+
+.field-Name{
+  padding-right: 20px;  
+}
+
+.filter-button > button{
+  background-color: #673ab7;
+  color: white;
+}
+
+.filter-button{
+    margin-left: 50px;
+}
+
+.filter-icon{
+    color: #673ab7;
+    margin-left: 40px;
+}
+
+.field-filter{
+  width:100px;
+}
